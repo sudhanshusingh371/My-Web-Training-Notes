@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reunion Form</title>
+    <style>
+        /* Style for the body and background image */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        /* Centering the form container */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Form header styles */
+        .form-container h1 {
+            text-align: center;
+            color: #0066cc;
+        }
+
+        .form-container p {
+            text-align: center;
+            color: #555;
+        }
+
+        /* Style for inputs, buttons, and labels */
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #0066cc;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #004d99;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Reunion Form</h1>
+        <p>Time to rekindle some good ol' memories! See you soon!</p>
+        <form>
+            <label>Date: <strong>25-06-2023</strong></label>
+            <label>Time: <strong>6pm onwards</strong></label>
+            <label>Address: <strong>Our Garage</strong></label>
+            
+            <label>Would you like to join us? *</label>
+            <input type="radio" name="join" value="Yes" required> Yes
+            <input type="radio" name="join" value="No"> No
+
+            <label>Name *</label>
+            <input type="text" name="name" placeholder="Your Full Name" required>
+
+            <label>Phone *</label>
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+
+            <label>Your Meal Preference *</label>
+            <input type="radio" name="meal" value="Vegetarian" required> Vegetarian
+            <input type="radio" name="meal" value="Non-Vegetarian"> Non-Vegetarian
+
+            <label>What kind of games are you interested in?</label>
+            <input type="checkbox" name="games" value="Indoor"> Indoor
+            <input type="checkbox" name="games" value="Board"> Board
+            <input type="checkbox" name="games" value="Ball"> Ball Games
+            <input type="checkbox" name="games" value="Outdoor"> Outdoor
+
+            <label>Do you have any questions?</label>
+            <textarea name="questions" rows="3" placeholder="Write your question here..."></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div class="footer">
+            <p>Looking forward to seeing you!</p>
+        </div>
+    </div>
+</body>
+</html>

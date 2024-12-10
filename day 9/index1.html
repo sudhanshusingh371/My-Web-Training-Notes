@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="section">
+        <h1 id="idselector"  class="claassSelector">hello World</h1>
+
+    </div>
+    <script>
+        const idSelector= () => {
+            let element= doccument.getElementbyId("idselector")
+            cconsole.log(element) 
+            element.innerHTML="This is Sudhanshu Singh I am using Id Selector"
+        }
+        const claassSelector = () => {
+            document.getElementsByClassName("classSelector")[0].innerHTML="This is Sudhanshu Singh I am using Class Selector"
+        }
+    </script>
+</body>
+</html>

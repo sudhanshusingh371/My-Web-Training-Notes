@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic Light</title>
+  <style>
+    .traffic-light {
+      width: 100px;
+      height: 300px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+     
+    }
+    .light {
+      width: 80px;
+      height: 80px;
+      background: gray;
+      border-radius: 50%;
+      transition: background 0.5s;
+    }
+    .red { background: red; }
+    .yellow { background: yellow; }
+    .green { background: green; }
+  </style>
+</head>
+<body>
+
+<div id="trafficLight" class="traffic-light">
+  <div id="red" class="light"></div>
+  <div id="yellow" class="light"></div>
+  <div id="green" class="light"></div>
+</div>
+
+<script>
+  const trafficLight = document.getElementById('trafficLight');
+  const lights = ['red', 'yellow', 'green'];
+  let currentIndex = 0;
+
+  const changeLight = () => {
+    trafficLight.querySelectorAll('.light').forEach((light, index) => {
+      light.classList.toggle(lights[index], index === currentIndex);
+    });
+    currentIndex = (currentIndex + 1) % lights.length;
+  };
+
+  const resetLights = () => {
+    trafficLight.querySelectorAll('.light').forEach(light => {
+      light.classList.remove('red', 'yellow', 'green');
+    });
+  };
+
+  trafficLight.addEventListener('mouseenter', changeLight);
+  trafficLight.addEventListener('mouseleave', resetLights);
+  trafficLight.addEventListener('touchstart', changeLight);
+  trafficLight.addEventListener('touchend', resetLights);
+</script>
+
+</body>
+</html>
